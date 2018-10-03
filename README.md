@@ -1,12 +1,19 @@
 # Djs Azure Sphere Scripts
 
-You have an Azure Sphere and want to get cracking with it
-ASAP! You can do so by following the documentation on docs.microsoft.com.
-There’s quite a bit to get through and much of it is of the format do this then
-do that then … . But it does seem a bit mechanical in that if, having done it
-once and had to do it again in a new environment, the actions would be largely
-the same. So couldn’t some or a significant amount of it be automated, or at
-least scripted?
+  
+
+This documentation, like the repository itself, is a work in
+progress.
+
+
+
+You have an Azure Sphere and you want to get cracking with
+it ASAP! You can do so by following the documentation on docs.microsoft.com.
+There’s quite a bit to get through and much of it is of the format: Do this
+then do that then … . But it does seem a bit mechanical in that if, having done
+it once and had to do it again in a new environment, the actions would be
+largely the same. So couldn’t some or a significant amount of it be automated,
+or at least scripted?
 
 
 
@@ -22,13 +29,20 @@ There are currently two main scripts:
 
 
 
-One for setting up the Active Directory Tenant
-for, and including  the device,
+(Coming in last week of Oct) One for setting up
+the Active Directory Tenant for, and including 
+the device,
 
-One for setting up the Azure IoT Hub, ddService
-and connecting the device to it
+(Azs.bat) One for setting up the Azure IoT Hub Device
+Provisioning Service and connecting the device to it
 
 
+
+
+
+Nb: NOTE THAT TENANTING OF AN AZURE SPHERE DEVICE IS ONCE
+ONLY ACTION, NOT UNDOABLE, NOT CHANGEABLE, NOT REVERSABLE. SO TAKE CARE WITH
+THAT SCRIPT. ALL CARE BUT NO RESPONSIBILITY AT THIS END.
 
 
 
@@ -40,7 +54,7 @@ as parameters to Azure calls.
 
 
 
-Currently the scripts do address setting up the required
+Currently the scripts do not address setting up the required
 Active Directory. Consult the Microsoft documentation for this. This may be
 added later. I used my AD from my Office 365 subscription (ominmicrosft.com)
 for which I use my domain name (sportronics.com.au)
@@ -50,6 +64,10 @@ for which I use my domain name (sportronics.com.au)
 Whilst these scripts are DOS Batch files, it is envisaged
 that a subsequent version with use Powershell.
 
+
+
+The scripts requires the azure CLI (Command Line Interface)
+to be installed as well as AzSphere
 
 
 
