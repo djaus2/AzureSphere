@@ -25,13 +25,15 @@ selection being made by choosing the item number.
 
 
 
-There are currently two main scripts:
+There are currently three main scripts:
+
+**Setup.bat** Guides you to the web pages for setting up Azure CLI, AzureSphere command prompt and Active Directory.
 
 **ClaimDevice.bat**..*(It's there now)* One for setting up
 the Active Directory Tenant for, and including 
 the device,
 
-**Azs.bat** One for setting up the Azure IoT Hub Device
+**AzsHub.bat** One for setting up the Azure IoT Hub Device
 Provisioning Service and connecting the device to it
 
 **Nb: NOTE THAT TENANTING OF AN AZURE SPHERE DEVICE IS ONCE
@@ -51,19 +53,14 @@ Each step in the two main scripts has a prompt so that you can skip the action i
 
 
 Currently the scripts do not address setting up the required
-Active Directory. Consult the Microsoft documentation for this. This may be
-added later. I used my AD from my Office 365 subscription (ominmicrosft.com)
+Active Directory, but you are refered to the appropiate web page. I used my AD from my Office 365 subscription (ominmicrosft.com)
 for which I use my domain name (sportronics.com.au)
-
-
 
 Whilst these scripts are DOS Batch files, it is envisaged
 that a subsequent version with use Powershell.
 
-
-
-The scripts requires the azure CLI (Command Line Interface)
-to be installed as well as AzSphere
+The scripts require the azure CLI (Command Line Interface)
+to be installed as well as AzSphere. These are refered to in setup.bat
 
 
 

@@ -1,6 +1,19 @@
 @echo off
 cls
 @echo [0] Default Names 
+@echo The steps for this script are:
+@echo [1] Logging in to Azure
+@echo [2] Setting Azure Group
+@echo [2.1] Get existing Azure Group Name
+@echo [2.2] Get new Azure Group Name
+@echo [3] Creating new IoT Hub
+@echo [4] Creating the IoT Hub Device Provisioning Service
+@echo [4.1] Get new DVPS Name
+@echo [4.2] Get new DVPS Location
+@echo [5] Link the IoT Hub to The Device Provisioning Service
+@echo.
+pause
+@echo [0] Default Names 
 @echo Nb: If a name is requested, just press enter to use these.
 @echo.
 set _nnn=137
@@ -119,7 +132,7 @@ call az configure --defaults group=%_groupname%
 
 :HUB
 echo.
-@echo [5] Creating new IoT Hub
+@echo [3] Creating new IoT Hub
 echo.
 
 @echo Do you want to create a new IoT Hub(N), use an existing one (E) or skip (S)?
@@ -177,7 +190,7 @@ IF "%ERRORLEVEL%"=="3"  goto LINK
 
 :NEWDVPS
 
-@echo [6.2] Get new DVPS Name
+@echo [4.1] Get new DVPS Name
 @echo Default DVPS Name: %defaultDVPS%
 set _dvps=
 SET /P _dvps= Enter DVPS Name:
@@ -188,7 +201,7 @@ SET  _dvps= %defaultDVPS%
 :NEXT6
 
 
-@echo [6.3] Get new DVPS Location
+@echo [4.2] Get new DVPS Location
 @echo Getting list of suitable loactions:
 call Get_DPS_Locations
 
@@ -205,7 +218,7 @@ call az iot dps list --resource-group %_groupname% -o Table
 
 :LINK
 @echo.
-@echo [7] Link the IoT Hub to The Device Provisioning Service
+@echo [5] Link the IoT Hub to The Device Provisioning Service
 @echo.
 
 @echo Do you want link a Hub to the DVPS (Y),or skip (S)?
