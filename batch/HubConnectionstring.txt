@@ -1,0 +1,2 @@
+IoT Hub AzSphere2 Connection String = 
+ECHO is off.

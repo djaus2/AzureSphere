@@ -44,6 +44,7 @@ IF EXIST %locns1% (   del /q %locns1%)
 IF EXIST %menu% (   del /q %menu% )
 EXIT /B 1
 
+:GotGroups
 type %menu2%
 SET /P numb= Enter IoT Hub Num:
 set /a num=%numb%-1
