@@ -27,22 +27,16 @@ selection being made by choosing the item number.
 
 There are currently two main scripts:
 
-
-
-(Coming in last week of Oct) One for setting up
+**ClaimDevice.bat**..*(It's there now)* One for setting up
 the Active Directory Tenant for, and including 
 the device,
 
-(Azs.bat) One for setting up the Azure IoT Hub Device
+**Azs.bat** One for setting up the Azure IoT Hub Device
 Provisioning Service and connecting the device to it
 
-
-
-
-
-Nb: NOTE THAT TENANTING OF AN AZURE SPHERE DEVICE IS ONCE
-ONLY ACTION, NOT UNDOABLE, NOT CHANGEABLE, NOT REVERSABLE. SO TAKE CARE WITH
-THAT SCRIPT. ALL CARE BUT NO RESPONSIBILITY AT THIS END.
+**Nb: NOTE THAT TENANTING OF AN AZURE SPHERE DEVICE IS ONCE
+ONLY ACTION, NOT UNDO-ABLE, NOT CHANGEABLE, NOT REVERSABLE. SO TAKE CARE WITH
+THAT SCRIPT. ALL CARE BUT NO RESPONSIBILITY AT THIS END.**
 
 
 
@@ -51,6 +45,8 @@ two scripts, each with a specific function. In the main, parameters are passed
 to these from the main scripts as environment variables. All subscript results
 are passed back as environment variables that are then used by the main scripts
 as parameters to Azure calls.
+
+Each step in the two main scripts has a prompt so that you can skip the action if already done. That way if you are part way through a script you can restart it and skip to where you are up to. Also you can do a "dummy run that way.
 
 
 
