@@ -59,7 +59,7 @@ SET /P _groupname= Enter Group Name:
 IF "%_groupname%Z"=="Z" GOTO DEFAULT2
 
 :skip5678
-call Get_List_Of_Groups
+call .\Subscripts\Get_List_Of_Groups
 
 if NOT ERRORLEVEL 1  GOTO GOTGRP
 @echo Exiting
@@ -107,7 +107,7 @@ SET  _locationName=%defaultLoc%
 
 :skip89
 
-call Get_IoTHub_Locations
+call .\Subscripts\Get_IoTHub_Locations
 
 @echo az group create --name %_groupname% --location "%_locationName%"
 call az group create --name %_groupname% --location "%_locationName%"
@@ -130,7 +130,7 @@ IF "%ERRORLEVEL%"=="3"  goto DVPS
 
 @echo Get list of Hubs for Group
 
-call Get_List_Of_Hubs
+call .\Subscripts\Get_List_Of_Hubs
 
 if NOT ERRORLEVEL 1  GOTO DVPS
 @echo Exiting
@@ -148,7 +148,7 @@ SET _iothubname=%defaultIoTHub%
 @echo %_iothubname%
 :NEXT3
 
-Call Get_SKU
+Call .\Subscripts\Get_SKU
 
 @echo SKU= %_sku%
 
