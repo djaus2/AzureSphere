@@ -1,7 +1,8 @@
 @echo off
 cls
-@echo [0] Default Names 
+
 @echo The steps for this script are:
+@echo [0] Default Names 
 @echo [1] Logging in to Azure
 @echo [2] Setting Azure Group
 @echo [2.1] Get existing Azure Group Name
