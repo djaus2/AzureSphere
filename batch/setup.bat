@@ -9,10 +9,9 @@ cls
 @echo [1] Setup azure CLI
 @echo [2] Setup AzureSphere SDK
 @echo [3] Setup Active Directory Account
-@echo The three setup actions in this script refer you to a web page (one for each). 
+@echo The three setup actions in this script refer you to a web page (one for each), after a test to see if they are installed, first.
 @echo Follow the steps on those pages. The other two scripts (The ClaimYourDevice.bat and Azs.bat script their actions for you.)
-@echo This script will guide you through the setup.
-@echo This script does refer you to Actice Directory setup
+@echo This script will guide you through the setup. It does now refer you to Actice Directory setup
 @echo.
 @echo Do yo wish to consult the MS docs Quickstart before starting here?
 choice /c:YN /M "Yes or No"
