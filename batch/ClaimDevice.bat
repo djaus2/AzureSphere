@@ -1,7 +1,7 @@
 @echo off
 @echo.
 @echo Setup Active Directory Domain Tenant and Claim Device
-@echo This requires AzureSphere to be installed and to be running at the Azsphere Developer Command Prompt
+@echo This requires AzureSphere to be installed at the default location "C:\Program Files (x86)\Microsoft Azure Sphere SDK"
 @echo Ref: https://docs.microsoft.com/en-us/azure-sphere/quickstart/qs-install
 @echo.
 @echo Continue?
@@ -28,7 +28,7 @@ choice /c:YN /M "Yes or No"
 IF "%ERRORLEVEL%"=="2"  GOTO DEVPROMPT
 @echo azsphere tenant list
 azsphere tenant list
-@echo In the text above, did get the message indicate you were Tenanted? Eg:
+@echo In the text above, did you get the message indicatoing you were Tenanted? Eg:
 @echo "ID                                   Name         "
 @echo "--                                   ----         "
 @echo "<Guid>                               <Domain Name>"
@@ -40,8 +40,8 @@ azsphere tenant list
 GOTO CLAIM
 
 :DEVPROMPT
-@echo Loading Azsphere Developer Command Prompt: "C:\Program Files (x86)\Microsoft Azure Sphere SDK\\InitializeCommandPrompt.cmd"
-call "C:\Program Files (x86)\Microsoft Azure Sphere SDK\\InitializeCommandPrompt.cmd"
+@echo Loading Azsphere Developer Command Prompt: "C:\Program Files (x86)\Microsoft Azure Sphere SDK\InitializeCommandPrompt.cmd"
+call "C:\Program Files (x86)\Microsoft Azure Sphere SDK\InitializeCommandPrompt.cmd"
 @echo Loaded Azsphere Developer Command Prompt
 
 :AzSLogIn

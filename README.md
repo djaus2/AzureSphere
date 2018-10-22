@@ -27,7 +27,7 @@ selection being made by choosing the item number.
 
 There are currently three main scripts:
 
-**Setup.bat** Guides you to the web pages for setting up Azure CLI, AzureSphere command prompt and Active Directory.
+**Setup.bat** Guides you through setting up Azure CLI, AzureSphere command prompt and Active Directory.
 
 **ClaimDevice.bat**..*(It's there now)* One for setting up
 the Active Directory Tenant for, and including 

@@ -1,4 +1,5 @@
 @echo off
+set defLocationAzspere=C:\Program Files (x86)\Microsoft Azure Sphere SDK
 cls
 @echo.
 @echo Welcome to the scripts for getting and even quicker start with Azure Sphere.
@@ -51,7 +52,11 @@ start microsoft-edge:https://docs.microsoft.com/en-us/cli/azure/install-azure-cl
 :AZURESPHERE
 cls
 @echo [2] Setup AzureSphere SDK
-call "C:\Program Files (x86)\Microsoft Azure Sphere SDK\\InitializeCommandPrompt.cmd"
+@echo Test if Azspere is installed. 
+@echo (Assumes, Azshpere if installed, is in the default location %defLocationAzspere% 
+@echo   Can set alt location at top of this script. )
+Pause
+call "%defLocationAzspere%\InitializeCommandPrompt.cmd"
 call azsphere -?
 @echo.
 @echo Is AzSphere setup? 
@@ -78,9 +83,13 @@ cls
 @echo In response, azsphere prompts you to pick an account. Choose your work/school account and type your password if required.
 @echo If login succeeds, the command returns a list of the Azure Sphere tenants that are available for you. 
 @echo If you are the first in your organization to sign in, you will not see any tenants.
-@echo The test command will follow:
+@echo PS. I use my Office365 AD
+@echo The test command will follow.
+@echo This takes you to a web login then returns to command prompt. Wait there awhile.
+@echo (Assumes Azspehere, if installed is in default location %defLocationAzspere%
+@echo   Can set alt location at top of this script.)
 Pause
-call "C:\Program Files (x86)\Microsoft Azure Sphere SDK\\InitializeCommandPrompt.cmd"
+call "%defLocationAzspere%\InitializeCommandPrompt.cmd"
 call azsphere login
 @echo.
 @echo Is AD for AzSpere setup?
@@ -98,5 +107,6 @@ Pause
 start microsoft-edge:https://docs.microsoft.com/en-us/azure-sphere/install/azure-directory-account
 
 :DONE
-@echo Now run ClaimYourDevice.bat to setup tenneting from this command prompt then run azs.bat to configure Azure IoTHub for the device.
+@echo Now run ClaimDevice.bat to setup Tenanting from this command prompt 
+@echo Then run AzsHub.bat to configure Azure IoTHub for the device.
 @echo DONE
