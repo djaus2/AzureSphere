@@ -1,11 +1,7 @@
 # Djs Azure Sphere Scripts
 
-  
-
 This documentation, like the repository itself, is a work in
 progress.
-
-
 
 You have an Azure Sphere and you want to get cracking with
 it ASAP! You can do so by following the documentation on docs.microsoft.com.
@@ -15,15 +11,11 @@ it once and had to do it again in a new environment, the actions would be
 largely the same. So couldn’t some or a significant amount of it be automated,
 or at least scripted?
 
-
-
 This GitHub repository contains a number of scripts, as DOS
 batch files, that do simplify this procedure. Where user input is required a
 user prompt for input occurs. Where the user needs to make a choice from
 existing Azure or other resources, a numbered list is auto-generated, with
 selection being made by choosing the item number. 
-
-
 
 There are currently three main scripts:
 
